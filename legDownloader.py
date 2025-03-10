@@ -5,7 +5,10 @@ counter = 0
 fileName = "default.fail" # if a file is created called this, something's gone wrong
 fileCounterInt = 1
 fileCounterStr = ""
+legYear = 0
 response = requests.get("https://www.legislation.gov.uk/ukpga/1998/46/data.pdf")
+
+legYear = int(input("What year would you like to download? "))
 
 # print(response.status_code)
 # print(response.content)
@@ -14,9 +17,9 @@ response = requests.get("https://www.legislation.gov.uk/ukpga/1998/46/data.pdf")
 
 while counter != 6:
     fileCounterStr = str(fileCounterInt)
-    response = requests.get("https://www.legislation.gov.uk/ukpga/1998/" + fileCounterStr + "/data.pdf")
+    response = requests.get("https://www.legislation.gov.uk/ukpga/" + str(legYear) + "/" + fileCounterStr + "/data.pdf")
     
-    fileName = ("1998 Act " + fileCounterStr + ".pdf")
+    fileName = (str(legYear) + " Act " + fileCounterStr + ".pdf")
 
     file = open(fileName, "wb")
 
