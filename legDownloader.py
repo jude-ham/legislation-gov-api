@@ -11,10 +11,10 @@ legTypeChoice = ""
 noMoreLeg = False
 # response = requests.get("https://www.legislation.gov.uk/ukpga/1998/46/data.pdf")
 
-choices = """1 for UK Public General Acts
-2 for Acts of the Senedd Cymru
-3 for Acts of the Scottish Parliament
-4 for Acts of the Northern Ireland Assembly
+choices = """1 for UK Public General Acts (Pre-1988 is currently untested)
+2 for Acts of the Senedd Cymru (May 2020 onwards)
+3 for Acts of the Scottish Parliament (1999 -  Present)
+4 for Acts of the Northern Ireland Assembly (2000 - 2002, 2007 - 2016, 2020 - Present)
 Or, enter 0 to choose an alternative, using a custom argument (not recommended, untested)"""
 print(choices)
 
