@@ -22,13 +22,12 @@ legTypeChoice = input("What legislature do you want to use? ")
 if legTypeChoice == "1":
     legType = "ukpga"
 elif legTypeChoice == "2":
-    legtype = "asc"
+    legType = "asc"
     print("currently very broken and untested")
 elif legTypeChoice == "3":
-    legtype = "asp"
-    print("i've somehow broken scotland as well ffs")
+    legType = "asp"
 elif legTypeChoice == "4":
-    legtype = "nia"
+    legType = "nia"
     print("don't event think about complaining if this doesn't work, not got round to looking at NI yet")
 else:
     legtype = input("What arugment do you want to use? ")
@@ -52,6 +51,7 @@ while noMoreLeg == False:
 
     if response.status_code == 404:
         print("404 Error hit, program will now stop.")
+        print("Requested link - " + "https://www.legislation.gov.uk/" + legType + "/" + legYear + "/" + fileCounterStr + "/data.pdf")
         noMoreLeg = True
         exit()
 
